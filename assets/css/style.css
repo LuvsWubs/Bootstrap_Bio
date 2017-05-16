@@ -1,5 +1,6 @@
 body {
   background-color: #d9d9d9;
+  height: auto;
 }
 
 .navBar {
@@ -11,20 +12,31 @@ body {
 
 }
 
-.navBar a {
-  text-decoration: none;
+.navbar-header {
+  margin-left: 70px;
+  font-size: 20px;
+  height: 60px;
+  font-color: white;
 }
 
-#name { 
+.navbar-right {
+  margin-right: 200px;
+  height: 60px;
+}
+
+.navbar-name { 
   color: white;
-  background-color: #4aaaa5;
+  background-color: coral;
   margin-left: 170px;
   font-size: 30px;
   width: 250px;
-  height: 45px;
+  height: 60px;
   text-align: center;
   padding: 15px 20px 0 20px;
   float: left;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  line-height: 30px;
 }
 
 #links {
@@ -41,14 +53,20 @@ body {
   font-family: 'Georgia', Times, Times New Roman, serif;
   width: auto;
   height: 600px;
-  margin-left: 170px;
+  margin-left: 155px;
 }
 
-.bio {
+.container-fluid {
+  background-color: #666;
+  font-color: white;
+  padding: 0 0 0 0;
+}
+
+#bio {
   background-color: #ffffff;
   width: 650px;
   height: auto;
-  padding-bottom: 20px;
+  padding: 0 0 20px 30px;
   float: left; 
   border: 1px solid #ccc;
 }
@@ -64,34 +82,38 @@ body {
 
 #header {
   width: 590px;
-  margin-left: 30px;
   margin-bottom: 20px;
-  border-bottom: 1px solid grey;
   font-color: #4aaaa5;
   padding: 20px 0 20px 6px;
   font-size: 22px;
 }
 
+h2 {
+  margin-left: 10px;
+}
+
 #pic {
   top: 75px;
-  margin: 0 20px 0 20px;
+  margin: 20px 20px 20px 0;
   float: left;
 }
 
-#p {
+p {
   font-color: #d9d9d9;
   margin: 0 15px;
+  margin-right: 15px;
 }
 
 #yourName, #yourEmail, #yourMessage {
   position: relative;
-  margin-left: 30px;
+  margin-left: 10px;
+  /*border: 1px solid coral;*/
 }
 
-.input {
+.input-email, .input-name {
   font-size: 18px;
   height: 24px;
-  width: 590px;
+  width: 545px;
   margin-left: 30px;
 }
 
@@ -107,12 +129,12 @@ an id into CSS. what should i write to optimize this CSS?*/
   margin-left: 30px;
   font-size: 18px;
   height: 100px;
-  width: 91%;
+  width: 545px;
 }
 
 .button {
-  background-color: #4aaaa5;
-  color: #ffffff;
+  background-color: coral;
+  /*color: #ffffff;*/
   width: 100px;
   height: 40px;
   font-size: 16px;
@@ -136,7 +158,7 @@ an id into CSS. what should i write to optimize this CSS?*/
   margin-left: 30px;
 }
 
-.connect {
+#connect {
   font-color: #ccc;
   font-size: 18px;
   background-color: white;
@@ -146,26 +168,30 @@ an id into CSS. what should i write to optimize this CSS?*/
   position: relative;
   margin-right: 200px;
   padding: 30px 20px;
-  width: 140px;
-  height: 80px; 
+  width: 180px;
+  height: 140px; 
   border: 1px solid #ccc;
 }
 
-.copyright {
+.footer {
   position: inline-block;
   text-align: center;
   font-color: white;
   background-color: #666666;
-  border-top: 4px solid #4aaaa5;
-  height: 50px;
+  border-top: 4px solid coral;
+  height: 80px;
   padding-top: 30px;
 }
 
-@media screen and (max-width: 1205px) {
+@media screen and (max-width: 1218px) {
 
-  #name { 
-    margin-left: 70px;
+  .navbar-name { 
+    margin-left: 85px;
 }
+
+  .navbar-right {
+    margin-right: 70px;
+}    
 
   #links {
     margin-right: 75px;
@@ -175,31 +201,38 @@ an id into CSS. what should i write to optimize this CSS?*/
     margin-left: 70px;
   }
 
-  .connect {
+  #connect {
     margin-right: 70px;
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1000px) {
+
+  .navbar-name {
+    margin-left: 15px;
+  }
+
+  .navbar-right {
+    margin-right: 15px;
+}    
 
   #links {
     float: left;
-    margin-right: 0px;
+    margin-right: 20px;
     margin-left: 195px;
   }
 
   .container {
-      margin-left: 70px;
+      margin-left: 0;
   }
 
-  .bio {
+  #bio {
     margin-right: 0;
     margin-bottom: 30px;
   }
 
-  .connect {
-    width: 610px;
-    height: 60px;
-    float: left;
+  #connect {
+    width: 22%;
+    height: 120px;
     margin-right: 0;
     padding-top: 15px;
   }
@@ -220,7 +253,41 @@ an id into CSS. what should i write to optimize this CSS?*/
     height: 167px;
   }
 }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 900px) {
+
+  #bio {
+    width: 70%;
+  }
+
+  #connect {
+    width: 26%;
+  }
+  
+  .input {
+    width: 86%;
+  }
+
+  #message {
+    width: 86%;
+  }
+
+ }
+
+  @media screen and (max-width: 770px) {
+
+  .navbar-name {
+    margin-left: 15px;
+  }
+
+  .navbar-nav a {
+    float: right;
+    width: 10%;
+  }
+
+  .navbar-header {
+    width: 30%;
+  }
 
   #name { 
     margin-left: 0;
@@ -232,14 +299,15 @@ an id into CSS. what should i write to optimize this CSS?*/
   }
 
   #links {
-    margin: 0 0 0 220px;
+    margin: 0  0 0;
   }
 
   .container {
       margin-left: 0;
+      height: 550px;
   }
 
-  .bio {
+  #bio {
     width: 100%;
   }
 
@@ -247,30 +315,24 @@ an id into CSS. what should i write to optimize this CSS?*/
     width: 100%;
   }
 
-  .input {
-    width: 90%;
-  }
-
-  .message {
-    width: 80%;
-    height: 100px;
-  }
-
   .filler {
     float: left;
-    margin: 0 0 0 10px;
+    margin: 0 0 10px 10px;
+    width: 30%;
   }
   
   .filler2 {
     float: left;
-    margin: 0 0 0 10px;
+    margin: 0 0 10px 10px;
+    width: 30%;
   }
 
   .filler3 {
-    margin: 0 0 0 10px;
+    margin: 0 0 10px 10px;
+    width: 30%;
   }
 
-  .connect {
+  #connect {
     width: 100%;
   }
 
@@ -280,32 +342,36 @@ an id into CSS. what should i write to optimize this CSS?*/
 }
   @media screen and (max-width: 640px) {
  
-    #name { 
-      width: 35%;
-      font-size: 20px;
+  #name { 
+    width: 35%;
+    font-size: 20px;
   }
 
-    #links {
-      margin: 0 20px 0 60px;
+  #links {
+    margin: 0 20px 0 60px;
   }
 
-    .filler {
-    width: 150px;
-    height: 125px;
-    margin-bottom: 10px;
+  .img-responsive {
+    height: 180px;
+    width: 180px;
   }
+
+  .filler {
+    width: 175px;
+    height: 150px;
+  } 
 
   .filler2 {
-    width: 150px;
-    height: 125px;
-  }
-
+    width: 175px;
+    height: 150px;
+  } 
   .filler3 {
-    width: 150px;
-    height: 125px;
-  }
+    width: 175px;
+    height: 150px;
+  } 
 
-  @media screen and (max-width: 440px) {
+
+  @media screen and (max-width: 465px) {
  
   .navBar {
     width: 100%;
@@ -316,11 +382,15 @@ an id into CSS. what should i write to optimize this CSS?*/
   }
 
   .container {
-    height: 800px;
+    height: 700px;
   }  
 
   .copyright {
     width: 100%;
+  }
+
+  #connect {
+    padding: 15px 15px;
   }
   
   #header {

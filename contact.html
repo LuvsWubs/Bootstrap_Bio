@@ -2,38 +2,59 @@
  <html lang="en-us">
   <head>
    <meta charset="UTF-8">
-    <title>Hello!</title>
-     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="viewport" content="width=device-width, inital scale=1">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
- 
+<!-- this stylesheet is optional for preset bootswatch colors -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css">
+     <title>Hello!</title>
+     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
-
-    <nav class="navbar navbar-inverse">
+  <body>
+<!--this nav bar doesn't work but i don't know why!
+    <div class="container">
+     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Diana</a>
+         Diana Schiele
+          <ul class="nav navbar-nav navbar-right">
+            <li class="links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </li>
+          </ul>
+         </div>
+        </div> 
+     </nav>
+    <br> -->
+  
+     <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-name"><h1>Diana Schiele</h1></div>
         </div>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>     
 
     <div class="container">
-     <br><br>
-     <div class="bio">
-      <div id="header"><h1><b>Contact</b></h1></div>
+     <div row>
+      <div class="col-xs-9 col-sm-9 col-md-8 col lg-8" id="bio">
+      <span id="header"><h2>Contact</h2></span>
+       <span class="input-name"><i class="glyphicon glyphicon-user"></i></span>
        <div id="yourName">Name:</div>
-        <input class="input" type="text" name="name">
+        <!-- <input class="input" type="text" name="name"> -->
         <br><br>
        <div id="yourEmail">Email:</div>
-        <input class="input" type="text" name="email">
+        <span class="input-email"><i class="glyphicons glyphicons-message-new"></i></span>
+        <!-- <input class="input" type="text" name="email"> -->
         <br><br>
        <div id="yourMessage">Message:</div>
         <textarea class="form control" type="text" id="message"></textarea> 
@@ -55,7 +76,7 @@
 </form> -->
        </div>
 
-      <div class="connect">
+      <div class="col-xs-3 col-sm-3 col-md-4 col lg-4" id="connect">
         Connect with Me
         <br><br>
           <div id="social">
@@ -66,10 +87,13 @@
     
             <src img="<?xml version="1.0" ?><svg height="40px" version="1.1" viewBox="0 0 60 60" width="40px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="soical" stroke="none" stroke-width="1"><g id="social" transform="translate(-973.000000, -438.000000)"><g id="slices" transform="translate(173.000000, 138.000000)"/><g fill="#CE6F2D" id="square-flat" transform="translate(173.000000, 138.000000)"><path d="M802.995937,300 L857.004063,300 C858.658673,300 860,301.33731 860,302.995937 L860,357.004063 C860,358.658673 858.66269,360 857.004063,360 L802.995937,360 C801.341327,360 800,358.66269 800,357.004063 L800,302.995937 C800,301.341327 801.33731,300 802.995937,300 Z" id="square-39"/></g><g fill="#FFFFFF" id="icon" transform="translate(182.000000, 150.000000)"><path d="M827.934218,320.012758 L812.552382,316.846154 L811.769231,320.129843 L829.446713,323.769231 L830.096746,321.046843 L830.963976,321.461538 L832.538462,317.997229 L815.651408,309.923077 L814.076923,313.386431 L827.934218,320.012758 L827.934218,320.012758 Z M834.846154,321.461538 L834.846154,331.846154 L807.153846,331.846154 L807.153846,321.461538 L810.615385,321.461538 L810.615385,328.384615 L831.384615,328.384615 L831.384615,321.461538 L834.846154,321.461538 Z M811.769231,323.769231 L830.230769,323.769231 L830.230769,327.230769 L811.769231,327.230769 L811.769231,323.769231 Z M834.846154,314.962841 L832.542622,318 L817.538462,306.348945 L819.204645,304.153846 L820.924729,304.153846 L834.846154,314.962841 Z" id="stackoverflow"/></g></g></g></svg>
          </div>  
+        </div> 
       </div>
     </div>
-
-    <div class="copyright"><h5>&copy; Copyright 2017 Diana Schiele</h5></div>
+      <footer class="container-fluid">
+       <div class="footer">
+        <p class="text-muted"><h5>&copy; Copyright 2017 Diana Schiele</h5></p>
+       </div> 
 
   </body>
   </html>
